@@ -836,7 +836,7 @@ text-align: center;
 }
 #border-warning {
 
-  border: 2px dashed #141414;
+  border: 2px dashed red;
 }
 
 .banner-text {
