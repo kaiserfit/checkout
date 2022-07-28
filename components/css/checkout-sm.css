@@ -1,0 +1,62 @@
+/* Breakpoint-sm */
+
+/* @media  (min-width: 480px) and (max-width: 691px) {
+
+    #teaser-box{
+        width: 30%;
+        margin: 0 auto;
+      }
+      .teaser-flex[data-order="1"]{
+        transform: translate(-50%) scale(0.8, 0.8);
+        left: 0vw;
+        z-index: 1;
+        opacity: 0.7;
+        
+       
+      }
+      
+      .teaser-flex[data-order="2"]{
+        left: 2vw;
+        transform: translate(-30%);
+        z-index: 3;
+        opacity: 1;
+      }
+      
+      .teaser-flex[data-order="3"]{
+        left: 24vw;
+        transform: translate(-40%) scale(0.8, 0.8);
+        z-index: 2;
+        opacity: 0.7;
+      }
+} */
+
+
+@media  (min-width: 577px) and (max-width: 767.98px) {
+
+    #teaser-box{
+        width: 35%;
+        margin: 0 auto;
+      }
+      .teaser-flex[data-order="1"]{
+        transform: translate(-50%) scale(0.8, 0.8);
+        left: 0vw;
+        z-index: 1;
+        opacity: 0.7;
+        
+       
+      }
+      
+      .teaser-flex[data-order="2"]{
+        left: 2vw;
+        transform: translate(-28%);
+        z-index: 3;
+        opacity: 1;
+      }
+      
+      .teaser-flex[data-order="3"]{
+        left: 24vw;
+        transform: translate(-45%) scale(0.8, 0.8);
+        z-index: 2;
+        opacity: 0.7;
+      }
+}

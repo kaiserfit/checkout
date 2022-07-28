@@ -1,0 +1,400 @@
+<div class="container p-3">
+
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-7 order-2 order-sm-1 p-3 ">
+        <!-- Checkout Form -->
+        <form id="checkout-form" class="p-3 rounded bg-premium">
+
+         
+            <div class="d-flex flex-row bd-highlight mb-3">
+              <div class="circle checkout-step-circle bg-dark text-white rounded-circle text-center fs-2" id="step1-circle">1</div>
+              <h1 class="circle-text checkout-step-text text-dark step ms-4 text-dark">Customer Info</h1>
+            </div>
+            <div class="w-100 mb-3" id="step1">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control customer-info" name="fname" id="fname" placeholder="Enter full name here">
+                <label for="fname">Full Name</label>
+              </div>
+
+
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control customer-info" name="email" id="email" placeholder="Enter full name here">
+                <label for="email">Email Address</label>
+              </div>
+
+              <div class="form-group mb-3" id="phone-container">
+    
+                <label for="cnum" class="flabel">Phone *</label>
+                    <input type="tel" class="form-control customer-info" size="100" id="cnum" name="cnum" aria-label="...">
+                  <span id="valid-msg" class="hide" style="color: green;">✓ Valid</span>
+                  <span id="error-msg" class="hide" style="color: red;"></span>
+                        
+                </div>
+            </div>
+
+
+
+           
+
+            <hr>
+
+
+            <div class="d-flex flex-row bd-highlight mb-3">
+              <div class="circle checkout-step-circle bg-dark text-white rounded-circle text-center fs-2">2</div>
+              <h1 class="circle-text checkout-step-text ms-4 text-dark">Shipping Info</h1>
+            </div>
+
+            <div class="w-100 mb-3 hidden-step" id="step-2">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control customer-shipping" name="sname" id="sname" placeholder="Street Name">
+                <label for="sname">Street Name</label>
+              </div>
+
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control customer-shipping" name="ctown" id="ctown" placeholder="Street Name">
+                    <label for="ctown">City/Town</label>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control customer-shipping" name="postCode" id="postCode" placeholder="Street Name">
+                    <label for="postCode">Zip/Postal Code</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <select class="form-select mb-3" aria-label="Country Select" name="cCountry" id="cCountry">
+                    <option selected="selected" value="1" disabled>Select Country</option>
+                  
+                  </select>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control customer-shipping" name="cState" id="cState" placeholder="State/Country">
+                    <label for="cState">State/Country</label>
+                  </div>
+                </div>
+              </div>
+              
+
+             
+
+
+           
+
+             
+            </div>
+
+            <hr>
+
+
+            <div class="d-flex flex-row bd-highlight mb-3">
+              <div class="circle checkout-step-circle bg-dark text-white rounded-circle text-center fs-2">3</div>
+              <h1 class="circle-text checkout-step-text ms-4 text-dark">Payment</h1>
+            </div>
+        </form>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-12 col-lg-5 order-1 order-sm-2 p-3 border border-secondary rounded-3 position-relative">
+        <!-- Order Summary -->
+        <img src="..." id="bundle-badge" alt="satisfaction badge">
+        <h4 class="mb-3 fw-bold">Your Order</h4>
+        <hr class="mt-4">
+
+
+
+        <div class="row py-4">
+          <div class="col-12 col-sm-5 mb-4 mb-sm-2"><img src="..." alt="Queen Formula Bottles" id="bundle-img" class="img-fluid"></div>
+          <div class="col-8 col-sm-5"><p id="bundle-bot"></p></div>
+          <div class="col-4 col-sm-2 text-end"> <p>$<span id="bundle-price"></span></p> </div>
+        </div>
+        <hr>
+      
+          <div class="row mb-2 d-none" id="shipping">
+            <div class="col-8 col-sm-9 text-end"><p>Shipping Fee:</p></div>
+            <div class="col-4 col-sm-3 text-end"> <p>$9.95</p> </div>
+          </div>
+     
+      
+        <div class="row mb-3">
+          <div class="col-8 col-sm-9 text-end"><p>Subtotal:</p></div>
+          <div class="col-4 col-sm-3 text-end"> <p>$<span id="subtotal-price"></span></p> </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-8 col-sm-9 text-end"><p class="fw-bold fs-4">Total:</p></div>
+          <div class="col-4 col-sm-3 text-end"> <p class="fw-bold fs-4">$<span id="total-price"></span></p> </div>
+        </div>
+
+        <img src="components/assets/img/mb-guarantee.webp" id="money-back" alt="Money Back Guarantee" class="img-fluid mx-auto mb-3">
+        <img src="components/assets/img/trust-banner.webp" alt="Trust Banner" class="img-fluid mx-auto rounded mb-3">
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <div class="container-fluid py-4" id="main-content">
+    <div class="col-12 col-sm-8 col-md-8 col-lg-6 offset-sm-2 offset-md-2 offset-lg-3 p-2 border-3 border-dark" style="border-style: dotted;">
+      <h2 class="bg-primary py-3 text-center text-white fw-bold mb-3">Complete Secure Order Now</h2>
+  
+      <div class="tab" id="tabgroup">
+        <button class="tablinks active" id="firstStep" data-idx="1" data-targetx = "2ndStep" onclick="openStep(event, 'step1')"><span>1</span><br>Enter Details</button>
+        <button class="tablinks" id="2ndStep" data-idx="2" data-targetx = "3rdStep" onclick="openStep(event, 'step2')"><span>2</span><br>Confirm Order</button>
+        <button class="tablinks" id="3rdStep" data-idx="3" data-targetx = "4" onclick="openStep(event, 'step3')"><span>3</span><br>Payment</button>
+      </div>
+  
+      <form id="payment-form" name="payment-form" accept-charset='UTF-8'>
+        <div id="form_errors"></div>
+        <div id="step1" class="tabcontent">
+        
+        
+           <div class="form-group">
+              <input type="text" class="form-control input-lg" id="fname" name="fname" placeholder="First Name*">
+              </div>
+         
+            <div class="form-group">
+            
+            <input type="email" class="form-control input-lg deets" id="c-email" onchange="formVals()" name="c-email" placeholder="Email *">
+          </div>
+            <div class="form-group" id="phone-container">
+            
+              <label for="cnum" style="font-weight: 300;" class="flabel">Phone *</label>
+                  <input type="tel" class="form-control input-lg" size="100" id="cnum" onchange="formVals()" name="cnum" aria-label="..." >
+                <span id="valid-msg" class="hide" style="color: green;">✓ Valid</span>
+                <span id="error-msg" class="hide" style="color: red;"></span>
+                      
+              </div>
+            
+        </div>
+        
+        
+        
+        <div id="step2" class="tabcontent">
+         <ul class="list-group">
+          <li class="list-group-item" ><span class="formLabel">Email:&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="li-email" class="formVal emails"></span><a href="#" data-dx="email" class="changeOpt">Change</a></li>
+          <li class="list-group-item" ><span class="formLabel">Phone:&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="li-num" class="formVal nums"></span><a href="#" data-dx="num" class="changeOpt">Change</a></li>
+          </ul>
+          
+          <h4><b>Order Summary</b></h4>
+          <div class="my-order">
+          <table id="orderTable" class="table-responsive">
+            <tbody>
+          <tr>
+            
+            <td class="orderItem"><span class="orderImage"><img id="tubol" src="components/img_assets/kaisercoach/kcc.png" alt="Dream Body Academy" width="200" height="80"></span><span id="suppName">Dream Body in 90 Challenge</span></td>
+            <td class="orderPrice">$37.00</td>
+            
+          </tr>
+            </tbody>
+          <tfoot>
+          <tr class="rowTotals">
+          
+              <th class="priceTotals">Subtotal</th>
+              <td class="orderTots">$37.00</td>
+            </tr>
+          <tr class="rowTotals">
+        
+              <th class="priceTotals">Total</th>
+              <td class="orderTots">$37.00</td>
+            </tr>
+          </tfoot>
+          </table>
+          <h4><b>Shipping Address</b></h4>
+            <input type="hidden" id="price_id" name="price_id" value="">
+            <input type="hidden" id="bundle_price" name="bundle_price" value="">
+          <div class="form-group">
+          
+            <input type="text" class="form-control input-lg" id="sname" name="sname" placeholder="Street Name *">
+          
+          </div>
+          <div class="row">
+          <div class="col-md-6">
+           <div class="form-group">
+          <input type="text" class="form-control input-lg" id="ctown" name="ctown" placeholder="Town/City *">
+          </div>
+          </div>
+          <div class="col-md-6">
+           <div class="form-group">
+          <input type="text" class="form-control input-lg" id="postCode" name="postCode" placeholder="Postcode *">
+          </div>
+          </div>
+          </div><!---end 1st row here------>
+          <div class="row">
+          <div class="col-md-6">
+           <div class="form-group">
+              <!---<input type="select" class="form-control input-lg" id="cCountry" name="cCountry" placeholder="Country*">---->
+            <select class="form-control input-lg" name="cCountry" id="cCountry">
+              <option selected="selected" value="1" disabled>--Select Country--</option>
+              
+            </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+           <div class="form-group">
+          <input type="text" class="form-control input-lg" id="cState" name="cState" placeholder="State/Country *">
+          </div>
+          </div>
+          </div><!---end 2nd row here------>
+          </div>
+          
+        </div>
+        
+        <div id="step3" class="tabcontent">
+        
+        <ul class="list-group">
+          <li class="list-group-item" ><span class="formLabel">Email:&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="li-emails" class="formVal emails"></span><a href="#" data-dx="email" class="changeOpt">Change</a></li>
+          <li class="list-group-item" ><span class="formLabel">Phone:&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="li-nums" class="formVal nums"></span><a href="#" data-dx="num" class="changeOpt">Change</a></li>
+         
+          </ul>
+          <h4><b>Payment Method</b></h4>
+          <p>All transactions are secure and encrypted. Credit card information is never stored on our servers.</p>
+          <div id="card-errors" role="alert"></div>
+          <div class="input-group" id="scard" style="width: 100%;">
+          <ul class="list-group paymentMethods">
+          
+          <!-- <form action="https://www.kaiserfitapp.com/wp-content/themes/hello-elementor/charge.php" method="post" id="stripe-form" name="stripe-form"> -->
+          <li class="list-group-item">
+            <label><span style="font-weight: 400;">Credit Card (Stripe)</span>
+           
+          <img src="etc/jcb.svg" class="cardIcon" alt="JCB">
+          <img src="etc/amex.svg" class="cardIcon" alt="American Express">
+          <img src="etc/mastercard.svg" class="cardIcon" alt="Mastercard">
+          <img class="cardIcon" src="etc/visa.svg" alt="Visa">
+            </label>
+          </li> 
+          <li class="list-group-item" style="display: none;" id="stripeOptions" name="stripeOptions">
+          Pay with your credit card via Stripe. 
+          <div class="form-group">
+            <label for="stripecn" style="font-weight: 400;">Card Number *</label>
+            
+                  <div id="stripecn">
+                  <!-- A Stripe Element will be inserted here. -->
+                  </div>
+          
+          </div>
+          <div class="row">
+              <div class="col-md-6">
+                        <label for="stripexpd" style="font-weight: 400;">
+                          Expiry Date
+                        </label>
+                        <div id="stripexpd">
+                        <!-- A Stripe Element will be inserted here. -->
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="stripecc" style="font-weight: 400;">
+                          Card Code (CVC)
+                        </label>
+                        <div id="stripecc">
+                        <!-- A Stripe Element will be inserted here. -->
+                        </div>
+                </div>
+            </div>
+            <div id="error" style="color: red; padding: 10px;"></div>
+            <div id="card-errors" role="alert"></div>
+              
+          </li>
+        
+        
+          </ul>
+          </div>
+          <div id="orderbump">
+          <div id="orderbumpBanner" style="background-color: #1c2634; padding:10px; ">
+            <input type="checkbox" id="ob" name="ob">
+            <span class="glyphicon glyphicon-arrow-right blink" style="color: red;float: left;"></span><label for="ob" style="color: white; font-size: 22px;">Yes! Another Free Bonus!! </label>
+            
+            <input type="hidden" id="obId" name="obId" value="79">
+            <input type="hidden" id="page" name="page" value="checkout">
+            </div >
+            <div style="padding:10px;">
+            <img src="components/img_assets/79.png" class="img-responsive">
+            <p><strong>One time Offer:</strong>
+              Join our most successful members who lose
+              the most weight <b>EFFORTLESSLY</b> in the <b>Kaiser Coach Platinum</b>
+               absolutely <b>FREE</b> and Supercharge Your Fat Loss.
+              <b>Get Monthly cooking videos, workout videos, cook books, 
+              weight loss secrets & MUCH MORE! Get all of this for the first 30 days 100% FREE!</b>
+              After that, you will be billed $79/Month and you can cancel anytime.
+              <b>Plus, get the Divine Desserts Cookbook absolutely FREE (normally $29.95)</b>
+              </p>
+            <br>
+            <img src="components/img_assets/kaisercoach/OB79q.png" class="img-responsive" alt="0">
+            <p style="font-size: 2vh; color: red; text-decoration: line-through; text-align: center; text-align:center;">Normally $79.00</p>
+            </div>
+              <br>
+          </div>
+           
+        </div>
+        
+        <!----end tab section---->
+        <div  id="buttonHolder">
+         <button type="button" class="btn btn-lg kaiserCheckout" id="next-step" data-id="1">
+          <img src="components/img_assets/clck.png">
+            <span  style="text-align: center;" id="btnTxt">&nbsp;PROCEED TO NEXT STEP <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></span>  
+            </button>
+        
+          <button class="btn btn-lg" id="btnStripe" data-toggle="modal" data-target="#modPurchase" style="display: none;">
+           <img src="components/img_assets/clck.png">
+            <span  style="text-align: center;" id="btnTxt">Complete Secure Order</span> 
+             </button>
+          </div>
+         </form>	
+  
+  <!-- 
+      <form id="payment-form">
+        <div id="form_errors"></div>
+        <div id="step1" class="tabcontent pt-4">
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control" name="fname" id="fname" placeholder="Full Name">
+            <label for="fname">Full Name</label>
+          </div>
+        
+        
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control" name="c-email" id="c-email" placeholder="Email">
+            <label for="c-email">Email</label>
+          </div>
+         
+  
+         <div class="form-group mb-3" id="phone-container">
+      
+                  <label for="cnum" class="flabel">Phone *</label>
+                      <input type="tel" class="form-control customer-info" size="100" id="cnum" name="cnum" aria-label="...">
+                    <span id="valid-msg" class="hide" style="color: green;">✓ Valid</span>
+                    <span id="error-msg" class="hide" style="color: red;"></span>
+                          
+          </div>
+           
+          <div id="buttonHolder">
+            <button type="button" name="" id="" class="btn p text-white checkout-buttons">
+              <img src="components/assets/img/clck.webp" alt=""> Proceed To Next Step
+            </button>
+          </div>
+       </div>
+      </form> -->
+  
+    </div>
+  </div>
