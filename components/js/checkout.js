@@ -22,16 +22,19 @@ var sc = false;
 
   switch (img) {
     case "platinum":
+      case "platinum-saver":
       $("#img-bundle").attr("src","components/assets/img/ultimate.webp");
       var pack = prices.find(x => x.id == img).alias;
       $("#dba").text(pack);
       break;
       case "gold":
+        case "gold-saver":
       $("#img-bundle").attr("src","components/assets/img/premium.webp");
       var pack = prices.find(x => x.id == img).alias;
       $("#dba").text(pack);
       break;
          case "bronze":
+          case "bronze-saver":
       $("#img-bundle").attr("src","components/assets/img/basic.webp");
       var pack = prices.find(x => x.id == img).alias;
       $("#dba").text(pack);
