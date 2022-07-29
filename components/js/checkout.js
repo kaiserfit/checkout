@@ -22,17 +22,17 @@ var sc = false;
 
   switch (img) {
     case "platinum":
-      $("#img-bundle").attr("src","components/img_assets/bundle/ultimate.webp");
+      $("#img-bundle").attr("src","components/assets/img/ultimate.webp");
       var pack = prices.find(x => x.id == img).alias;
       $("#dba").text(pack);
       break;
       case "gold":
-      $("#img-bundle").attr("src","components/img_assets/bundle/premium.webp");
+      $("#img-bundle").attr("src","components/assets/img/premium.webp");
       var pack = prices.find(x => x.id == img).alias;
       $("#dba").text(pack);
       break;
          case "bronze":
-      $("#img-bundle").attr("src","components/img_assets/bundle/starter.webp");
+      $("#img-bundle").attr("src","components/assets/img/basic.webp");
       var pack = prices.find(x => x.id == img).alias;
       $("#dba").text(pack);
       break;
@@ -45,7 +45,7 @@ var sc = false;
   }
 
   
-    
+  
     
    //*******intl-Tel-input******/
 
