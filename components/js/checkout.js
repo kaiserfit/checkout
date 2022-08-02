@@ -409,6 +409,14 @@ function checkIntl(){
                 
                  $(".orderTots").text("$78.95");
                  $('#bundle_price').val("$78.95");
+              } else if (value.id === "bronze-saver") {
+                $('#orderTable tr:first').after('<tr id="orderbr" style="margin-bottom: 20px;"><td class="orderItem"><span class="orderImage">'+
+                '&nbsp;'+
+                '</span"><span style="margin-left: 80px;">&nbsp;&nbsp;Shipping Fee</span></td>'+
+                '<td class="orderPrice">$9.95</td></tr>');
+                      
+                       $(".orderTots").text("$68.95");
+                       $('#bundle_price').val("$68.95");
               } else {
                 $(".orderTots").text(value.price);
                  $('#bundle_price').val(value.price);
