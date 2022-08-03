@@ -305,10 +305,10 @@ function stripeTokenHandler(token) {
        
         var price = data.price;
          
-        fbq('track', 'Purchase', {
-          value: price,
-          currency: 'USD'
-          }, {eventID:event_id});
+        // fbq('track', 'Purchase', {
+        //   value: price,
+        //   currency: 'USD'
+        //   }, {eventID:event_id});
         var ip = getCookie('_uip');
         kTr('Purchase', ip);
           ttq.track('CompletePayment',{
@@ -318,12 +318,12 @@ function stripeTokenHandler(token) {
             value: price,
             currency: 'USD'});
 
-            gtag('event', 'conversion', {
-              'send_to': 'AW-10886811479/DB76CJPsy7QDENeensco',
-              'value': price,
-              'currency': 'USD',
-              'transaction_id': data.orderid
-          });
+          //   gtag('event', 'conversion', {
+          //     'send_to': 'AW-10886811479/DB76CJPsy7QDENeensco',
+          //     'value': price,
+          //     'currency': 'USD',
+          //     'transaction_id': data.orderid
+          // });
       
        
         document.cookie = "bot="+data.bot+";path=/";
