@@ -121,29 +121,23 @@ const event_id = 'event-'+hashVal+'-'+timeStamp; //unique ID of visitor
       
     <div class="row">
       
-        <div class="col-12 col-sm-12 col-md-12 col-lg-4 text-center text-lg-start">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 text-center">
             <img src="components/img_assets/kwhite.webp" id="klogo" alt="KaizerFit">
    
         </div>
-     
-      <div class="col-12 col-sm-12 col-md-12 col-lg-8 text-center text-lg-start">
-       
-<!--         
-        <div class="d-inline-flex ">
-          <p class="text-white me-3"><i class="far fa-envelope fs-3 position-relative me-2" style="bottom: -5px;"></i>service@kaiserfit.net</p>
-        </div>
-        <div class="d-inline-flex ">
-          <p class="text-white me-3"><span style="font-size: 12px;">Need Help With Your Order? Contact Us: </span><br><i class="fas fa-phone-alt fs-3 position-relative me-2" style="bottom: -5px;"></i>+1 833 692 0371</p>
-
-        </div>
-        <div class="d-inline-flex ">
-          <img src="components/assets/img/trust-banner.webp" height="40" width="300" class="ms-3 mt-3 rounded border-glow-trust" alt="trust-banner">  
-
+     <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+      <img src="components/assets/img/trust-banner.webp" class="img-fluid rounded border-glow-trust" alt="trust-banner">
+     </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-3 text-white  text-center text-lg-start">
+        <p class="mt-3 mt-lg-0 lh-1 d-inline" style="font-size: 12px;">Need Help With Your Order? Contact Us: </p>
+        <!-- <div class="row">
+          <div class="col-12 col-sm-12 col-md-6"><i class="far fa-envelope fs-3 position-relative me-2" style="bottom: -5px;"></i>service@kaiserfit.net</div>
+          <div class="col-12 col-sm-12 col-md-6"><i class="fas fa-phone-alt fs-3 position-relative me-2" style="bottom: -5px;"></i>+1 833 692 0371</div>
         </div> -->
-        <div class="d-lg-flex justify-content-end bd-highlight text-white">
-          <div class="p-2 bd-highlight"><i class="far fa-envelope fs-3 position-relative me-2" style="bottom: -5px;"></i>service@kaiserfit.net</div>
-          <div class="p-2 bd-highlight text-center text-lg-end"><span style="font-size: 12px;">Need Help With Your Order? Contact Us: </span><br><i class="fas fa-phone-alt fs-3 position-relative me-2" style="bottom: -5px;"></i>+1 833 692 0371</div>
-          <div class="p-2 bd-highlight"><img src="components/assets/img/trust-banner.webp" height="40" width="300" class="ms-3 mt-3 rounded border-glow-trust" alt="trust-banner"></div>
+        <div class="d-lg-flex flex-row bd-highlight mb-3">
+          <div class="p-1 bd-highlight"><i class="far fa-envelope  position-relative me-1" style="bottom: -5px;"></i>service@kaiserfit.net</div>
+          <div class="p-1 bd-highlight"><i class="fas fa-phone-alt  position-relative me-1" style="bottom: -5px;"></i>+1 833 692 0371</div>
+          
         </div>
         
       
@@ -159,9 +153,6 @@ const event_id = 'event-'+hashVal+'-'+timeStamp; //unique ID of visitor
 
   <!-- trust section -->
 
-  <!-- <div class="container-fluid  text-center pt-3 px-2 px-md-0 mb-1 mb-sm-4">
-    <img src="components/assets/img/trust-banner.webp" class="img-fluid rounded mb-4 border-glow-trust" alt="trust-banner">
-  </div> -->
   <div class="container-fluid my-3 p-1">
     <div id="border-warning"  class="text-dark py-4">
       <div  id="blue">
@@ -293,7 +284,7 @@ const event_id = 'event-'+hashVal+'-'+timeStamp; //unique ID of visitor
     </div>
 
   <div class="container my-3 text-center" id="guarantees">
-    <h2 class="display-3">Dream Body in 90 <span id="dba" class="text-capitalize"></span> Pack</h2>
+    <h2 class="display-3">KaiserBody Bundle <span id="dba" class="text-capitalize"></span> Pack</h2>
     <div class="row">
       <div class="col-12 col-sm-12 col-md-12 col-xxl-6 pt-1 pt-sm-5">
         <img src="" id="img-bundle" alt="Dream Body in 90 bundle" class="img-fluid  mb-3 d-block mx-auto">
@@ -323,100 +314,9 @@ const event_id = 'event-'+hashVal+'-'+timeStamp; //unique ID of visitor
   
 
 
-<script>
-  function rotate(){
-    var cols = $(".teaser-col");
-    $.each(cols, function(key, val){
-     
-      var order = parseInt(val.dataset.order);
-      switch (order){
-        case 1:
-          val.classList.remove('order-1');
-          val.classList.remove('col-2');
-          val.classList.add('order-2');
-          val.classList.add('col-4');
-          val.dataset.order = "2";
-        break;
-        case 2:
-          val.classList.remove('order-2');
-          val.classList.remove('col-4');
-          val.classList.add('order-3');
-          val.classList.add('col-2');
-          val.dataset.order = "3";
-        break;
-        case 3:
-          val.classList.remove('order-3');
-          val.classList.add('order-1');
-          val.dataset.order = "1";
-        break;
-        default: break;
 
-      }
-    });
-  }
-</script>
-<div class="container position-relative text-center" id="teaser-wrap">
-  <h3>A Preview of Your KaiserCoach App!</h3>
-  <div class="d-block mx-auto position-relative" id="teaser-box">
-    <div class="d-flex bd-highlight mx-auto mb-3">
-      <div class="p-2 bd-highlight teaser-flex" data-order="3"><img src="components/img_assets/screenshot-1.webp"   alt=""></div>
-      <div class="p-2 bd-highlight teaser-flex" data-order="2"><img src="components/img_assets/screenshot-3.webp"   alt=""></div>
-      <div class="p-2 bd-highlight teaser-flex" data-order="1"><img src="components/img_assets/screenshot-2.webp"  alt=""></div>
-    </div>
-
-   
-  </div>
-
-  <div class="row w-100 position-absolute top-50">
-    <div class="col-6 display-1 text-start">
-      <i class="fas fa-caret-left teaser-nav" style="cursor: pointer;" onclick="changeOrder('prev')"></i>
-    </div>
-    <div class="col-6 display-1 text-end">
-      <i class="fas fa-caret-right" style="cursor: pointer;" onclick="changeOrder('next')"></i>
-    </div>
-  </div>
-</div>
-
-
-
-
-</div>
-
-
-
-
-
-
-<script>
-
-
-function changeOrder(dir) {
-  // const allSlides = document.querySelectorAll(".single-slide");
-  const allSlides = document.querySelectorAll(".teaser-flex");
-  // const previous = "1";
-  const previous = (dir === 'next') ? "1":"3";
-  const current = "2";
-  // const next = "3";
-  const next = (dir === 'next') ? "3":"1";;
-
-  for (const slide of allSlides) {
-    const order = slide.getAttribute("data-order");
-
-    switch (order) {
-      case current:
-        slide.setAttribute("data-order", previous);
-        break;
-      case next:
-        slide.setAttribute("data-order", current);
-        break;
-      case previous:
-        slide.setAttribute("data-order", next);
-        break;
-    }
-  }
-}
-</script>
   <div class="container text-center">
+    <h1 class="display-2 fw-bold">LIFETIME MONEYBACK GUARANTEE</h1>
     <img src="components/img_assets/moneyback-guarantee.webp" class="img-fluid d-block mx-auto border-glow-blue" alt="100% money back guarantee">
   </div>
 
@@ -712,7 +612,7 @@ function changeOrder(dir) {
 
 <script type="text/javascript">
 function add_chatapi(){var hccid=59320448;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatapi.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
-  // add_chatapi();
+  add_chatapi();
   </script>
 </body>
 <script src="build/js/intlTelInput.js"></script>

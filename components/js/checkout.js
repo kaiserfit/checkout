@@ -400,7 +400,7 @@ function checkIntl(){
 
             if (sku === value.id){
               $("#suppName").text(value.name);
-              $(".orderPrice").text(value.price);
+              $(".orderPrice").text("$"+value.price);
               if (value.id === "bronze"){
            $('#orderTable tr:first').after('<tr id="orderbr" style="margin-bottom: 20px;"><td class="orderItem"><span class="orderImage">'+
           '&nbsp;'+
@@ -415,10 +415,15 @@ function checkIntl(){
                 '</span"><span style="margin-left: 80px;">&nbsp;&nbsp;Shipping Fee</span></td>'+
                 '<td class="orderPrice">$9.95</td></tr>');
                       
-                       $(".orderTots").text("$68.95");
+                       $(".orderTots").text("$68.95/Month");
                        $('#bundle_price').val("$68.95");
               } else {
-                $(".orderTots").text(value.price);
+                if (value.id === "gold-saver" || value.id === "platinum-saver"){
+                  $(".orderTots").text("$"+value.price+"/Month");
+                } else {
+
+                  $(".orderTots").text("$"+value.price);
+                }
                  $('#bundle_price').val(value.price);
               }
               
