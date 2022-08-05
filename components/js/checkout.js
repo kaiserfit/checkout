@@ -418,8 +418,10 @@ function checkIntl(){
                        $(".orderTots").text("$68.95/Month");
                        $('#bundle_price').val("$68.95");
               } else {
-                if (value.id === "gold-saver" || value.id === "platinum-saver"){
-                  $(".orderTots").text("$"+value.price+"/Month");
+                if (value.id === "gold-saver"){
+                  $(".orderTots").text("$"+value.price+"/3 Months");
+                } else if (value.id === "platinum-saver"){
+                  $(".orderTots").text("$"+value.price+"/6 Months");
                 } else {
 
                   $(".orderTots").text("$"+value.price);
