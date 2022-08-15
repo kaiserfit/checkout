@@ -35,25 +35,25 @@ function getUserDate(){
     switch (bot) {
     case 1:
         setTimeout(function(){
-             window.location.href="/queen-formula-3.html";
+             window.location.href="/up/queen-formula-3.html";
         }, 500);
       break;
     case 3 :
         setTimeout(function(){
-            window.location.href="/queen-formula-6.html";
+            window.location.href="/up/queen-formula-6.html";
        }, 500);
      
       break;
      case 6 :
         setTimeout(function(){
-            window.location.href="/queen-formula-12.html";
+            window.location.href="/up/queen-formula-12.html";
        }, 500);
      
       break;
       
     default:
         setTimeout(function(){
-            window.location.href="/queen-formula-3.html";
+            window.location.href="/up/queen-formula-3.html";
        }, 500);
       break;
   }
