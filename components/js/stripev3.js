@@ -367,7 +367,7 @@ function stripeTokenHandler(token) {
       
     },
       error: function (data, xhr,jqXHR, ajaxOptions, thrownError) {
-        console.log('error', data);
+        console.log('error', data, xhr, jqXHR, ajaxOptions, thrownError);
         $("#card-errors").html('');
      		$("#card-errors").append("<p style='color: red;'>Card Declined/Insufficient Funds.<br>Please Check your Card Details</p>");
         $('html, body').animate({ scrollTop: $('#card-errors').offset().top }, 'slow');
