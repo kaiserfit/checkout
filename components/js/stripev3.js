@@ -313,6 +313,7 @@ function stripeTokenHandler(token) {
         kTr('Purchase', ip);
           ttq.track('CompletePayment',{
             content_id: 'Queen Formula',
+            content_type: 'product',
             quantity: parseInt(data.bot),
             price: price,
             value: price,
