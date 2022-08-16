@@ -358,7 +358,8 @@ function stripeTokenHandler(token) {
          $("#card-errors").html('');
      		$("#card-errors").append("<p style='color: red;'>Card Declined/Insufficient Funds.<br>Please Check your Card Details</p>");
         $('html, body').animate({ scrollTop: $('#card-errors').offset().top }, 'slow');
-       
+        $("#btnStripe").prop('disabled', false);
+        $("#btnStripe > #btnTxt").text('Complete Secure Order');
         return false;
       
         
@@ -371,7 +372,8 @@ function stripeTokenHandler(token) {
         $("#card-errors").html('');
      		$("#card-errors").append("<p style='color: red;'>Card Declined/Insufficient Funds.<br>Please Check your Card Details</p>");
         $('html, body').animate({ scrollTop: $('#card-errors').offset().top }, 'slow');
-       
+        $("#btnStripe").prop('disabled', false);
+        $("#btnStripe > #btnTxt").text('Complete Secure Order');
       
         
       }, done: function () {
