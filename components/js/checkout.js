@@ -19,23 +19,41 @@ function getParameterByName(name, url = window.location.href) {
 
 var sc = false;
   var img = getParameterByName('dba');
-
+  var p = getParameterByName('product');
   switch (img) {
     case "platinum":
       case "platinum-saver":
-      $("#img-bundle").attr("src","components/assets/img/ultimate.webp");
+          if (p==="kb"){
+
+            $("#img-bundle").attr("src","components/assets/img/burner/ultimate-p.webp");
+          } else {
+            $("#img-bundle").attr("src","components/assets/img/ultimate.webp");
+
+          }
       var pack = prices.find(x => x.id == img).alias;
       $("#dba").text(pack);
       break;
       case "gold":
         case "gold-saver":
-      $("#img-bundle").attr("src","components/assets/img/premium.webp");
+          if (p==="kb"){
+            $("#img-bundle").attr("src","components/assets/img/burner/premium-p.webp");
+            
+          } else {
+            $("#img-bundle").attr("src","components/assets/img/premium.webp");
+
+          }
       var pack = prices.find(x => x.id == img).alias;
       $("#dba").text(pack);
       break;
          case "bronze":
           case "bronze-saver":
-      $("#img-bundle").attr("src","components/assets/img/basic.webp");
+            if (p==="kb"){
+              $("#img-bundle").attr("src","components/assets/img/burner/starter-p.webp");
+              
+            } else {
+              
+              $("#img-bundle").attr("src","components/assets/img/basic.webp");
+            }
       var pack = prices.find(x => x.id == img).alias;
       $("#dba").text(pack);
       break;
@@ -43,7 +61,7 @@ var sc = false;
     default: 
    
     $("#dba").text('Starter');
-    $("#img-bundle").attr("src","components/img_assets/bundle/starter.webp");
+    $("#img-bundle").attr("src","components/assets/img/basic.webp");
     break;
   }
 
@@ -345,11 +363,17 @@ function checkIntl(){
      function skuCheck(){ //check sku
         var sku= getParameterByName("dba");
         var disc = getCookie('pdisc');
-
+        var prod = getParameterByName('product');
       //  console.log(disc);
            if (sku == "" || sku == null){
-          sku = "bronze";
-        }
+              sku = "bronze";
+            }
+
+            if (prod == "" || prod == null){
+              prod = "qf";
+            }
+
+
 
         if (!(!disc)) { //there is a discount applied #discount
           var filter = {
@@ -398,7 +422,7 @@ function checkIntl(){
         } else { //apply normal rates
           $.each( prices, function( key, value ) {
 
-            if (sku === value.id){
+            if (sku === value.id && prod === value.product){
               $("#suppName").text(value.name);
               $(".orderPrice").text("$"+value.price);
               if (value.id === "bronze"){
