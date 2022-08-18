@@ -72,7 +72,7 @@ var sc = false;
 
       var input = document.querySelector("#cnum");
       var dc="";
- var iti =   window.intlTelInput(input,{
+      var iti =   window.intlTelInput(input,{
       
       
       geoIpLookup: function(callback) {
@@ -89,7 +89,7 @@ var sc = false;
     initialCountry: "auto",
     utilsScript: "build/js/utils.js?1613236686837",
     
-    } );
+      } );
   
  //var inputx = document.querySelector("#cnum"),
   errorMsg = document.querySelector("#error-msg"),
@@ -158,7 +158,7 @@ function checkIntl(){
   function isEmail(email) {
   var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,6})+$/;
   return regex.test(email);
-}
+  }
 
 
 
