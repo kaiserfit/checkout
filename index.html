@@ -45,14 +45,7 @@ const timeStamp = Date.now();
 const event_id = 'event-'+hashVal+'-'+timeStamp; //unique ID of visitor
 
     
-var ipv4 = "";
 
-$.get("https://ipinfo.io", function(response) {    
-    ipv4 = response.ip;
-    document.cookie="_uip="+ipv4;
-    // fbq('track', 'SubmitApplication', {}, {eventID:event_id});
-    // kTr('SubmitApplication');
-}, "json");
 
 
      function getCookie(cname) {
