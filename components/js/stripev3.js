@@ -305,12 +305,14 @@ function stripeTokenHandler(token) {
        
         var price = data.price;
          
-        // fbq('track', 'Purchase', {
-        //   value: price,
-        //   currency: 'USD'
-        //   }, {eventID:event_id});
-        var ip = getCookie('_uip');
-        kTr('Purchase', ip);
+        fbq('track', 'Purchase', {
+          value: price,
+          currency: 'USD'
+          }, {eventID:event_id});
+
+        
+      
+        kTr('Purchase');
           ttq.track('CompletePayment',{
             content_id: 'Queen Formula',
             content_type: 'product',
@@ -397,7 +399,7 @@ function kTr(eventName){
   var url = window.location.href;
   var navAgent = navigator.userAgent;
   var fbc = getCookie('_fbc');
-
+  var ipv4 = getCookie('_uip');
 var data = {
     'eventName': eventName,
     'eventID': event_id,
