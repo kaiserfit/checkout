@@ -314,7 +314,7 @@ function stripeTokenHandler(token) {
       
         kTr('Purchase');
           ttq.track('CompletePayment',{
-            content_id: 'Queen Formula',
+            content_id: 'Kaiser burner',
             content_type: 'product',
             quantity: parseInt(data.bot),
             price: price,
